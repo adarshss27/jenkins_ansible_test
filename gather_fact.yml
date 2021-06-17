@@ -2,4 +2,4 @@
   connection: local
   tasks:
   - debug:
-      msg: "The kernel version is : {{ansible_facts['kernel']}}"
+      msg: "The kernel version is the: {{ansible_facts['kernel']}}"
