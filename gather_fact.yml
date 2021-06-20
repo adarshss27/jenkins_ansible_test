@@ -1,5 +1,8 @@
 - hosts: 127.0.0.1
-  connection: local
+  #connection: local
+  vars:
+    ansible_user: adarsh
+    ansible_ssh_pass: Abc123#@!
   tasks:
   - debug:
       msg: "The kernel version is the following variable: {{ansible_facts['kernel']}}"
