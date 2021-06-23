@@ -9,7 +9,8 @@ pipeline {
         stage('build'){
             steps { 
             sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'project_test2', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '*')])
-            sshTransfer('execCommand: "ansible-playbook  /home/adarsh/project_test2/gather_fact.yml')
+            sshTransfer('execCommand: "ansible-playbook  /home/adarsh/project_test2/dir1/gather_fact.yml')
+            sshTransfer('execCommand: "ansible-playbook  /home/adarsh/project_test2/dir2/gather_fact.yml')                          
            }
         }  
     }
