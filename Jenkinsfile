@@ -8,7 +8,7 @@ pipeline {
         }
         stage('build'){
             steps { 
-            sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '',execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'project_test2', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '*')]
+            sshPublisher(publishers: [sshPublisherDesc(configName: 'ansible', transfers: [sshTransfer(cleanRemote: false, excludes: '',execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: 'project_test2', remoteDirectorySDF: false, removePrefix: '', sourceFiles: '*')])
             }
         }
         stage('Deploy'){
