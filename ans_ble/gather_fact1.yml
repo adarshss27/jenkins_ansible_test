@@ -2,7 +2,7 @@
   #connection: local
   vars:
     ansible_user: adarsh
-    ansible_ssh_pass: Abc
+    ansible_ssh_pass: Abc123#@!
   tasks:
   - debug:
       msg: "The kernel version is the only_111111111111111111111111: {{ansible_facts['kernel']}}"
